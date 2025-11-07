@@ -1,80 +1,121 @@
-<img width="250px" src="https://neon.com/brand/neon-logo-dark-color.svg" />
+# 📝 Neon Notes
 
-# Neon Auth Demo App
+Una aplicación de **notas con autenticación y base de datos Neon**, construida con **Next.js**, **Drizzle ORM**, **Chakra UI** y **Tailwind CSS**.
 
-## Features
+🚀 **Deploy:** [app-neon-notes.netlify.app](https://app-neon-notes.netlify.app)
+💻 **Repo:** [github.com/Kenkyoo/app-neon-notes](https://github.com/Kenkyoo/app-neon-notes)
 
-- Next.js application with TypeScript
-- User authentication powered by Neon Auth
-- Database migrations with Drizzle ORM
-- Ready-to-deploy configuration for Vercel, Netlify, and Render
+---
 
-## Prerequisites
+## 🧠 Características
 
-- [Neon](https://neon.com) account
-- Node.js 18+ installed locally
+* 🔐 Autenticación de usuarios con [Stack Auth](https://stack-auth.com)
+* 🗄️ Base de datos **PostgreSQL** en la nube con **Neon**
+* ⚡ ORM ligero y moderno con **Drizzle ORM**
+* 🎨 Interfaz creada con **Chakra UI** y **Tailwind CSS**
+* ☁️ Deploy en **Netlify**
+* ✅ CRUD de notas con acciones del servidor (Next.js App Router)
 
-## Local Development Setup
+---
 
-### Clone this repository
+## 🛠️ Tecnologías
 
-Clone this demonstration application and install the dependencies:
+* [Next.js 14](https://nextjs.org/) (App Router)
+* [Drizzle ORM](https://orm.drizzle.team/)
+* [Neon](https://neon.tech/) (PostgreSQL serverless)
+* [Chakra UI](https://chakra-ui.com/)
+* [Tailwind CSS](https://tailwindcss.com/)
+* [Stack Auth](https://stack-auth.com/)
+
+---
+
+## ⚙️ Instalación
 
 ```bash
-git clone https://github.com/neondatabase-labs/neon-auth-demo-app.git
+# Clonar el repositorio
+git clone https://github.com/Kenkyoo/app-neon-notes.git
+cd app-neon-notes
 
-cd neon-auth-demo-app
+# Instalar dependencias
 npm install
+
+# Crear archivo .env.local
+cp .env.example .env.local
 ```
 
-### Set up Neon Auth
+Configura tus variables de entorno para **Neon** y **Stack Auth**:
 
-1. Create or open a [Neon project](https://console.neon.tech/app/projects)
-2. Go to **Neon Auth** → **Setup instructions**
-3. Click **Set up Auth** to generate your configuration
-4. Copy these environment variables to `.env.local`:
-   - `NEXT_PUBLIC_STACK_PROJECT_ID`
-   - `NEXT_PUBLIC_STACK_PUBLISHABLE_CLIENT_KEY`
-   - `STACK_SECRET_SERVER_KEY`
-   - `DATABASE_URL`
+```env
+DATABASE_URL="tu_url_de_neon"
+STACK_PROJECT_ID="tu_project_id"
+STACK_SECRET_KEY="tu_secret_key"
+```
 
-![Screenshot of Neon Auth API keys in the console](/images/neon-auth-api-keys.png)
+Luego:
 
-### Set up and run the application
+```bash
+# Generar y aplicar migraciones
+npm run drizzle:generate
+npm run drizzle:migrate
 
-1. Set up the database:
+# Iniciar el servidor de desarrollo
+npm run dev
+```
 
-   ```bash
-   npm run drizzle:generate  # Generates migrations
-   npm run drizzle:migrate   # Applies migrations
-   ```
+---
 
-2. Start the development server:
+## 🧩 Estructura principal
 
-   ```bash
-   npm run dev
-   ```
+```
+app/
+ ├─ actions/        # Acciones del servidor (crear, eliminar, actualizar notas)
+ ├─ components/     # Componentes UI con Chakra y Tailwind
+ ├─ db/             # Configuración de Drizzle ORM y esquemas
+ ├─ (auth)/         # Rutas protegidas por autenticación
+ └─ page.tsx        # Vista principal de notas
+```
 
-3. Visit `http://localhost:3000` to see the application running (check your console for the actual port if 3000 is in use).
+---
 
-   ![Screenshot of the Neon Auth demo application showing the todos interface](/images/neon-auth-todos-app.png)
+## 🖼️ Ejemplo
 
-## Production Setup (Important)
+```tsx
+export async function TodoList() {
+  const todos = await getTodos();
+  if (!todos) return <Heading>Loading...</Heading>;
 
-Configure production settings in the Neon Console's Auth Configuration tab, such as domain restrictions.
+  return (
+    <Container>
+      <Heading>{todos.length} notas</Heading>
+      {todos.map((todo) => (
+        <Card key={todo.id}>
+          <Card.Body>
+            <Card.Title>Nota</Card.Title>
+            <Card.Description>{todo.task}</Card.Description>
+          </Card.Body>
+        </Card>
+      ))}
+    </Container>
+  );
+}
+```
 
-   ![Screenshot of Neon Auth configuration settings](/images/neon-auth-production-config.png)
+---
 
-## Learn More
+## 📦 Scripts disponibles
 
-- [Neon Auth Documentation](https://neon.com/docs/guides/neon-auth)
-- [Stack Auth Documentation](https://docs.stack-auth.com/)
+```bash
+npm run dev              # Ejecutar en modo desarrollo
+npm run build            # Compilar para producción
+npm run start            # Iniciar servidor en producción
+npm run drizzle:generate # Generar esquemas de DB
+npm run drizzle:migrate  # Aplicar migraciones
+npm run format           # Formatear código
+```
 
-## Authors
+---
 
-- [David Gomes](https://github.com/davidgomes)
-- [Pedro Figueiredo](https://github.com/pffigueiredo)
+## 🧑‍💻 Autor
 
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
+Desarrollado por **Franco Kenkyoo** 🧩
+📂 [Portfolio](https://github.com/Kenkyoo)

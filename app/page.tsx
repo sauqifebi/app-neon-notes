@@ -2,8 +2,6 @@ import { AddTodoForm } from "app/add-todo";
 import { Header } from "app/header";
 import { TodoList } from "app/todo-list";
 import {
-  AbsoluteCenter,
-  Box,
   Button,
   Container,
   CloseButton,
@@ -56,13 +54,6 @@ export default async function Home() {
           </Portal>
         </Drawer.Root>
         <TodoList />
-      <Box position="absolute" bottom="0" h="60px" bg="bg.muted" borderRadius="md">
-      <AbsoluteCenter>
-        <Box bg="bg.emphasized" px="4" py="2" borderRadius="md" color="fg">
-          Dev by Kenkyo
-        </Box>
-      </AbsoluteCenter>
-    </Box>
       </>
     );
   }

@@ -14,7 +14,7 @@ export default function Handler(props: any) {
   return (
     <Container maxW="md" px="2" py="4">
       <Box position="relative" h="100vh" borderRadius="md">
-        <Stack>
+        <Stack gap="8">
           <Heading size="3xl" letterSpacing="tight">
             <Highlight query="with speed" styles={{ color: "teal.600" }}>
               Login in your account
