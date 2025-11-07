@@ -11,7 +11,7 @@ export function Header({ children }: { children?: ReactNode }) {
   const app = useStackApp();
 
   return (
-    <Box background="teal.600" width="100%" color="white">
+    <Box background="teal.600" width="100%" color="white" padding="2">
       <Flex gap="4" align="center" justify="space-between">
         <Heading> App Notes </Heading>
         {user ? (

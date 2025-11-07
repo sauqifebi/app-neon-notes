@@ -25,8 +25,8 @@ export async function TodoList() {
 
   return (
     <Container fluid px="4">
-      <Flex gap="4" direction="column">
-      <Heading>
+      <Flex gap="4" direction="column" padding="8">
+      <Heading padding="2">
         {pendingTodos} todo{pendingTodos !== 1 ? "s" : ""} remaining
       </Heading>
       {todos.length > 0 ? (
