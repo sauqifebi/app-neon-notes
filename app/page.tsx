@@ -8,16 +8,18 @@ import { stackServerApp } from "app/stack";
 export default async function Home() {
   const user = await stackServerApp.getUser();
   let content = null;
-  console.log(user)
+  console.log(user);
   if (user) {
     content = (
       <>
         <Drawer.Root>
-          <Drawer.Trigger asChild>
-            <Button variant="outline" size="sm">
-              Open Drawer
-            </Button>
-          </Drawer.Trigger>
+          <Header>
+            <Drawer.Trigger asChild>
+              <Button variant="outline" size="sm">
+                Open Drawer
+              </Button>
+            </Drawer.Trigger>
+          </Header>
           <Portal>
             <Drawer.Backdrop />
             <Drawer.Positioner>
@@ -26,9 +28,7 @@ export default async function Home() {
                   <Drawer.Title>Sidebar</Drawer.Title>
                 </Drawer.Header>
                 <Drawer.Body>
-                  <p className="mb-10">
-                   Create a note
-                  </p>
+                  <p className="mb-10">{user.primaryEmail}</p>
                   <AddTodoForm />
                 </Drawer.Body>
                 <Drawer.Footer>
@@ -42,14 +42,15 @@ export default async function Home() {
             </Drawer.Positioner>
           </Portal>
         </Drawer.Root>
+
         <div className="flex flex-col justify-center items-center gap-8">
           <TodoList />
-           <UsersStats />
+          <UsersStats />
         </div>
       </>
     );
   }
-  
+
   return (
     <>
       <Header />

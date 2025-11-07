@@ -34,7 +34,7 @@ export async function TodoList() {
             <Card.Root width="320px" key={todo.id}>
               <Card.Body gap="2">
                 {todo.owner?.email ? (
-                  <Card.Title mt="2"> {todo.owner.email}</Card.Title>
+                  <Card.Title mt="2"> Note </Card.Title>
                 ) : null}
                 <Card.Description>{todo.task}</Card.Description>
               </Card.Body>
